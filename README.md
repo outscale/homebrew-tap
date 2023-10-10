@@ -5,5 +5,5 @@
 # install
 
 ```sh
-brew tap outscale/homebrew-tap/
+brew tap outscale/tap
 ```
