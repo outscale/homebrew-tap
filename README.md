@@ -7,3 +7,6 @@
 ```sh
 brew tap outscale/tap
 ```
+
+# contribution
+You can open a PR, or an issue
