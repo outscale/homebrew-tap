@@ -1,12 +1,13 @@
-class OapiCli < Formula
-  desc "Official Outscale CLI providing connectors to Outscale API"
+class OapiCliGit < Formula
+  desc "Official Outscale CLI providing connectors to Outscale API, nightly version"
   homepage "https://github.com/outscale/oapi-cli"
-  url "https://github.com/outscale/oapi-cli.git", tag: "v0.4.0"
-  head "https://github.com/outscale/oapi-cli", branch: "v0.4.0"
+  url "https://github.com/outscale/oapi-cli.git"
+  head "https://github.com/outscale/oapi-cli", branch: "master"
   sha256 ""
   license "BSD-3-Clause"
-  version "0.4.0"
+  version "git"
 
+  conflicts_with "oapi-cli"
   depends_on "curl"
   depends_on "json-c"
   depends_on "cmake" => :build
