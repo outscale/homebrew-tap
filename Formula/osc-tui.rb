@@ -46,8 +46,8 @@ class OscTui < Formula
   end
 
   resource "osc-diagram" do
-    url "https://files.pythonhosted.org/packages/94/b8/4f71f4cc3b8e3978b77f0f1ebcdce435415e526383aa54dfaa1923f6374d/osc_diagram-0.0.1.tar.gz"
-    sha256 "2e7a4eaa3255c0f08f2e5fdf348c47c4b0a77cbbcedbe7785d158e73a01b6f2d"
+    url "https://files.pythonhosted.org/packages/a2/fc/fe8343b917286e454804decb5db7a420ebfa6ae333fb6987b4d301d10c34/osc_diagram-0.0.2.tar.gz"
+    sha256 "aea5e6a6a2cc8f631aa4407855f37022b6c3f396a1b9832c787d964a389abd97"
   end
 
   resource "osc-npyscreen" do
