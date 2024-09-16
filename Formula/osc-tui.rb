@@ -3,16 +3,16 @@ class OscTui < Formula
 
   desc "Outscale TUI providing connectors to Outscale API"
   homepage "https://github.com/outscale/osc-tui"
-  url "https://files.pythonhosted.org/packages/23/5b/7ea740ee2333ac86ca3124f9b1abceaee6d71a29e462d1937817c766272c/osc_tui-24.6.1.tar.gz"
-  sha256 "119a2b1d73dddbd9408fcd9641dec04781e64d6172f2f71c6e7caf5afec249dc"
+  url "https://files.pythonhosted.org/packages/6d/bb/39edb1b2cf326c5dd430b560ed4d7e5732600f9e7f3d35b1c7fcf24da282/osc_tui-24.9.0.tar.gz"
+  sha256 "44d963e819ee24bb08ff4cf963b1421b246e1a544cff6d0e9bac9ad6d3dec342"
   license "BSD-3-Clause"
 
 
   depends_on "python@3.12"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/c2/02/a95f2b11e207f68bc64d7aae9666fed2e2b3f307748d5123dffb72a1bbea/certifi-2024.7.4.tar.gz"
-    sha256 "5a1e7645bc0ec61a09e26c36f6106dd4cf40c6db3a1fb6352b0244e7fb057c7b"
+    url "https://files.pythonhosted.org/packages/b0/ee/9b19140fe824b367c04c5e1b369942dd754c4c5462d5674002f75c4dedc1/certifi-2024.8.30.tar.gz"
+    sha256 "bec941d2aa8195e248a60b31ff9f0558284cf01a52591ceda73ea9afffd69fd9"
   end
 
   resource "charset-normalizer" do
@@ -31,8 +31,8 @@ class OscTui < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
-    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
+    url "https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz"
+    sha256 "12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"
   end
 
   resource "jinja2" do
@@ -51,8 +51,8 @@ class OscTui < Formula
   end
 
   resource "osc-npyscreen" do
-    url "https://files.pythonhosted.org/packages/89/49/d6305289ac5e9efee78f774d761d5607d5c067a50a2fca7647a35ca93a67/osc_npyscreen-4.9.1.tar.gz"
-    sha256 "0123d40af2669f18e7f03e6d56122c2e94112db367f38b4ff3b64185a7a842a5"
+    url "https://files.pythonhosted.org/packages/c1/9c/ec8544951977298ae212af2b0da39e81e6c64bb83689cdc126587fc1197d/osc_npyscreen-4.9.2.tar.gz"
+    sha256 "676ad26a0f1500d7dbad347db59a3afb334955596b99931e971c278977b95b81"
   end
 
   resource "osc-sdk-python" do
@@ -76,8 +76,8 @@ class OscTui < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/98/0b/56dabcf2b37d9152090bcd5d42e28ad312c9ba54fb1446b22dcc809dd84a/setuptools-73.0.0.tar.gz"
-    sha256 "3c08705fadfc8c7c445cf4d98078f0fafb9225775b2b4e8447e40348f82597c0"
+    url "https://files.pythonhosted.org/packages/27/b8/f21073fde99492b33ca357876430822e4800cdf522011f18041351dfa74b/setuptools-75.1.0.tar.gz"
+    sha256 "d59a21b17a275fb872a9c3dae73963160ae079f1049ed956880cd7c09b120538"
   end
 
   resource "typed-ast" do
@@ -86,8 +86,8 @@ class OscTui < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
-    sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
+    url "https://files.pythonhosted.org/packages/ed/63/22ba4ebfe7430b76388e7cd448d5478814d3032121827c12a2cc287e2260/urllib3-2.2.3.tar.gz"
+    sha256 "e7d814a81dad81e6caf2ec9fdedb284ecc9c73076b62654547cc64ccdcae26e9"
   end
 
   def install
