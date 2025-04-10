@@ -6,7 +6,7 @@ class OapiCli < Formula
 
   sha256 ""
   license "BSD-3-Clause"
-  version "0.7.0"
+  version "0.7.1"
 
   depends_on "curl"
   depends_on "json-c"
