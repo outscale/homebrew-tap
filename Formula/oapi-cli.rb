@@ -14,8 +14,7 @@ class OapiCli < Formula
   def install
     system "git", "submodule", "update", "--init"
     system "make"
-    mkdir_p bin
-    cp "./oapi-cli", bin/"oapi-cli"
+    bin.install "oapi-cli"
     mkdir_p "#{prefix}/contrib/completions/bash/"
     mkdir_p "#{prefix}/contrib/completions/zsh/"
     cp "./oapi-cli-completion.bash", "#{prefix}/contrib/completions/bash/"
