@@ -5,11 +5,10 @@ class OapiCli < Formula
 
   license "BSD-3-Clause"
 
+  head "https://github.com/outscale/oapi-cli.git", branch: "master"
   depends_on "pkgconf" => :build
   depends_on "curl"
   depends_on "json-c"
-
-  conflicts_with "oapi-cli-git", because: "each are different versions of the same formula"
 
   def install
     system "git", "submodule", "update", "--init"
