@@ -1,7 +1,7 @@
 class OapiCli < Formula
   desc "Official Outscale CLI providing connectors to Outscale API"
   homepage "https://github.com/outscale/oapi-cli"
-  url "https://github.com/outscale/oapi-cli.git", tag: "v0.10.0"
+  url "https://github.com/outscale/oapi-cli.git", tag: "v0.11.0"
 
   license "BSD-3-Clause"
 
