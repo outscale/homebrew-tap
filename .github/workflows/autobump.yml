@@ -1,0 +1,50 @@
+name: Bump formulae on schedule or request
+
+on:
+  workflow_dispatch:
+    inputs:
+      formulae:
+        description: Custom list of formulae to livecheck and bump if outdated
+        required: false
+  schedule:
+    - cron: "6 2 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  autobump:
+    env:
+      HOMEBREW_DEVELOPER: 1
+    runs-on: macos-15
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: false
+          cask: true
+          test-bot: false
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@main
+        with:
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'Outscale Bot' }}
+
+      - name: Bump formulae
+        id: autobump
+        env:
+          HOMEBREW_TEST_BOT_AUTOBUMP: 1
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOMEBREW_GIT_COMMITTER_NAME: Outscale Bot
+          HOMEBREW_GIT_COMMITTER_EMAIL: opensource+bot@outscale.com
+          FORMULAE: ${{ inputs.formulae }}
+        continue-on-error: true
+        run: |
+          BREW_BUMP=(brew bump --no-fork --open-pr --formulae)
+          if [[ -n "${FORMULAE-}" ]]; then
+            xargs "${BREW_BUMP[@]}" <<<"${FORMULAE}"
+          else
+            "${BREW_BUMP[@]}" --auto --tap=outscale/homebrew-tap
+          fi
