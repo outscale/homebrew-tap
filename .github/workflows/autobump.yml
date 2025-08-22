@@ -13,6 +13,10 @@ permissions:
   contents: write
   pull-requests: write
 
+env:
+  COMMITTER_NAME: "Outscale Bot"
+  COMMITTER_EMAIL: "opensource+bot@outscale.com"
+
 jobs:
   autobump:
     env:
@@ -28,17 +32,17 @@ jobs:
           test-bot: false
 
       - name: Configure Git user
-        uses: Homebrew/actions/git-user-config@main
-        with:
-          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'Outscale Bot' }}
+        run: |
+          git config --global user.name "${{ env.COMMITTER_NAME }}"
+          git config --global user.email "${{ env.COMMITTER_EMAIL }}"
 
       - name: Bump formulae
         id: autobump
         env:
           HOMEBREW_TEST_BOT_AUTOBUMP: 1
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          HOMEBREW_GIT_COMMITTER_NAME: Outscale Bot
-          HOMEBREW_GIT_COMMITTER_EMAIL: opensource+bot@outscale.com
+          HOMEBREW_GIT_COMMITTER_NAME: ${{ env.COMMITTER_NAME }}
+          HOMEBREW_GIT_COMMITTER_EMAIL: ${{ env.COMMITTER_EMAIL }}
           FORMULAE: ${{ inputs.formulae }}
         continue-on-error: true
         run: |
