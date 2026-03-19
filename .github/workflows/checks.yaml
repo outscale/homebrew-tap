@@ -36,9 +36,7 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      #- run: brew test-bot --only-tap-syntax
-
-      - run: brew test-bot --only-formulae-detect --test-default-formula
+      - run: brew test-bot --only-formulae-detect
         id: formulae-detect
 
       - id: brew-test-bot-formulae
@@ -77,4 +75,4 @@ jobs:
 
       - run: brew test-bot --only-setup --dry-run
 
-      - run: brew test-bot testbottest --only-formulae --dry-run
+      - run: brew test-bot --only-formulae --dry-run
