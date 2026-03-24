@@ -47,7 +47,7 @@ jobs:
         continue-on-error: true
         run: |
           BREW_BUMP=(brew bump --no-fork --open-pr --formulae)
-          if [[ -n "${FORMULAE}" ]]; then
+          if [ ! -z "$FORMULAE" ]; then
             xargs "${BREW_BUMP[@]}" <<<"${FORMULAE}"
           else
             "${BREW_BUMP[@]}" --auto --tap=outscale/homebrew-tap
