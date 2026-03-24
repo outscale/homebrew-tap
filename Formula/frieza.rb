@@ -3,6 +3,7 @@ class Frieza < Formula
   homepage "https://github.com/outscale/frieza"
   url "https://github.com/outscale-dev/frieza.git", :tag => "v0.6.0"
   license "BSD-3-Clause"
+  autobump true
 
   depends_on "go" => :build
   
