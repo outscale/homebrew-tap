@@ -52,5 +52,5 @@ jobs:
           if [[ -n "${FORMULAE-}" ]]; then
             xargs "${BREW_BUMP[@]}" <<<"${FORMULAE}"
           else
-            "${BREW_BUMP[@]}" --auto --tap=${{ github.repository_owner }}/core
+            "${BREW_BUMP[@]}" --auto --tap=${{ github.repository_owner }}/homebrew-tap
           fi
