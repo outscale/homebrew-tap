@@ -10,10 +10,9 @@ class Octl < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "mod", "edit", "-go=1.24"
     system "go", "mod", "tidy"
     ldflags = ["-s", "-w", "-X=github.com/outscale/octl/pkg/version.Version=v#{version}"]
-    system "go", "build", *std_go_args(ldflags:)
+    system "go", "build", "-tags=homebrew", *std_go_args(ldflags:)
 
     generate_completions_from_executable(bin/"octl", shell_parameter_format: :cobra)
   end
