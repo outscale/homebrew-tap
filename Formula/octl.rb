@@ -2,8 +2,8 @@ class Octl < Formula
   desc "Modern CLI for Outscale"
   homepage "https://github.com/outscale/octl"
   url "https://github.com/outscale/octl.git",
-    tag:      "v0.0.21",
-    revision: "13b14e6d13ce1dd4d0a039141508d7a0fbcd7d44"
+    tag:      "v0.0.22",
+    revision: "3fce28533754a9182719269950e7ab5a88e8fe4e"
   license "BSD-3-Clause"
   head "https://github.com/outscale/octl.git", branch: "main"
 
@@ -11,7 +11,7 @@ class Octl < Formula
 
   def install
     system "go", "mod", "tidy"
-    ldflags = ["-s", "-w", "-X=github.com/outscale/octl/pkg/version.Version=v#{version}"]
+    ldflags = ["-s", "-w", "-X=github.com/outscale/octl/pkg/version.Version=v#{version}", "-X=k8s.io/component-base/version.gitVersion=v1.35.3+octl"]
     system "go", "build", "-tags=homebrew", *std_go_args(ldflags:)
 
     generate_completions_from_executable(bin/"octl", shell_parameter_format: :cobra)
