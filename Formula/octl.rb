@@ -2,8 +2,8 @@ class Octl < Formula
   desc "Modern CLI for Outscale"
   homepage "https://github.com/outscale/octl"
   url "https://github.com/outscale/octl.git",
-    tag:      "v0.0.22",
-    revision: "3fce28533754a9182719269950e7ab5a88e8fe4e"
+    tag:      "v0.0.24",
+    revision: "ed8be67e2b0b3aaa509088fd12ed043640f9218a"
   license "BSD-3-Clause"
   head "https://github.com/outscale/octl.git", branch: "main"
 
