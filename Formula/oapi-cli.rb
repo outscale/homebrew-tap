@@ -6,6 +6,9 @@ class OapiCli < Formula
   license "BSD-3-Clause"
 
   head "https://github.com/outscale/oapi-cli.git", branch: "master"
+
+  deprecate! date: "2026-06-15", because: "Superseeded by `octl`", replacement_formula: "octl"
+
   depends_on "pkgconf" => :build
   depends_on "curl"
   depends_on "json-c"
