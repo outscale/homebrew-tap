@@ -14,7 +14,8 @@ on:
         required: true
 
 permissions:
-  contents: read
+  contents: write
+  id-token: write
 
 jobs:
   pr:
@@ -42,6 +43,7 @@ jobs:
             Automatic PR based on tool release.
           title: "🚀 ${{ env.tool }} ${{ env.tag }}"
           token: "${{ env.token }}"
+          branch-token: ${{ env.GITHUB_TOKEN }}
           labels: "kind/feature"
         env:
           tool: ${{ github.event.inputs.tool }}
