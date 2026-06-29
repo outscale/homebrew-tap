@@ -26,7 +26,7 @@ jobs:
         uses: chainguard-dev/actions/setup-gitsign@3e76343fe029f8e2a10bfbec0da8f437e5dab7a5 # main
       - name: 📝 Update formula
         run: |
-          apt install gettext-base
+          sudo apt install gettext-base
           envsubst < .github/templates/$TOOL.rb.template > Formula/$TOOL.rb
         env:
           TOOL: ${{ github.event.inputs.tool }}
