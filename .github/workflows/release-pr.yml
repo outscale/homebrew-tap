@@ -24,7 +24,7 @@ jobs:
       - name: ⬇️ Checkout code
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
       - name: ⬇️ Set up gitsign
-        uses: chainguard-dev/actions/setup-gitsign@3e76343fe029f8e2a10bfbec0da8f437e5dab7a5 # main
+        uses: chainguard-dev/actions/setup-gitsign@0bacfe710021b5ad6d8886a53a34c40072f2fc90 # main
       - name: 📝 Update formula
         run: |
           sudo apt install gettext-base
