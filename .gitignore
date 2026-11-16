@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+
+# Local bottle artifacts from `brew test-bot`
+*.bottle.json
+*.bottle.tar.gz
