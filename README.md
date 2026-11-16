@@ -4,6 +4,24 @@
 
 ---
 
+## 📦 Available Projects
+
+<!-- BEGIN PROJECTS -->
+| Project | Description | Repository | Install |
+| --- | --- | --- | --- |
+| [frieza](https://github.com/outscale/frieza) | Tool to cleanup your cloud resources | https://github.com/outscale/frieza | `brew install outscale/tap/frieza` |
+| [kafkadumper](https://github.com/outscale/KafkaDumper) | CLI tool to create snapshots of Kafka topics at a specific point in time | https://github.com/outscale/KafkaDumper | `brew install outscale/tap/kafkadumper` |
+| [oapi-cli](https://github.com/outscale/oapi-cli) | Official Outscale CLI providing connectors to Outscale API | https://github.com/outscale/oapi-cli | `brew install outscale/tap/oapi-cli` |
+| [osc-logs](https://github.com/outscale/osc-logs) | Stream the Outscale API call logs for analytics and long-term storage | https://github.com/outscale/osc-logs | `brew install outscale/tap/osc-logs` |
+| [osc-tui](https://github.com/outscale/osc-tui) | Outscale TUI providing connectors to Outscale API | https://github.com/outscale/osc-tui | `brew install outscale/tap/osc-tui` |
+<!-- END PROJECTS -->
+
+> [!NOTE]
+> This table is generated from `Formula/*.rb` by `./scripts/update-readme.sh` — do not edit it by hand.
+> CI fails when the table and the formulae disagree. See [AGENTS.md](./AGENTS.md) for the update workflow.
+
+---
+
 ## 🌐 Links
 
 * Documentation: [https://docs.outscale.com/en/](https://docs.outscale.com/en/)
@@ -14,6 +32,7 @@
 
 ## 📄 Table of Contents
 
+* [Available Projects](#-available-projects)
 * [Overview](#-overview)
 * [Requirements](#-requirements)
 * [Installation](#-installation)
